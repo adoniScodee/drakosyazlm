@@ -1,68 +1,103 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="tr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Drakos Software</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Drakos.Software — Yazılım · Siber Güvenlik · Dijital Pazarlama</title>
+  <meta name="description" content="Drakos.Software — Yazılım, siber güvenlik, SEO, Google Ads, sosyal medya yönetimi ve 7/24 AnyDesk destek." />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- Hero Section -->
-  <header class="hero">
-    <h1>Drakos Software</h1>
-    <p>Yazılımı Basitleştirir, Büyümeyi Hızlandırır</p>
-    <div class="cta-buttons">
-      <a href="#contact" class="btn">Ücretsiz Keşif Görüşmesi</a>
-      <a href="#services" class="btn secondary">uzaktan destek alabilirsiniz</a>
+  <canvas id="matrix"></canvas>
+
+  <header class="nav">
+    <div class="brand">
+      <img src="assets/logo.svg" alt="Drakos Software Logo" class="logo" />
+      <h1>Drakos.<span>Software</span></h1>
     </div>
+    <nav>
+      <a href="#services">Hizmetler</a>
+      <a href="#security">Siber Güvenlik</a>
+      <a href="#contact">İletişim</a>
+    </nav>
   </header>
 
-  <!-- Services Section -->
-  <section id="services" class="services">
-    <h2>Hizmetlerimiz</h2>
-    <div class="service-list">
-      <div class="service">Özel Yazılım Geliştirme</div>
-      <div class="service">Mobil Uygulama</div>
-      <div class="service">Yapay Zekâ & Veri Bilimi</div>
-      <div class="service">Bulut & DevOps</div>
-      <div class="service">UI/UX Tasarım</div>
-    </div>
-  </section>
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <h2>Yazılım · Siber Güvenlik · Dijital Pazarlama</h2>
+        <p>Profesyonel yazılım çözümleri, saldırı önleme, SEO, Google Reklamları ve sosyal medya uzmanlığı. 7/24 AnyDesk ile destek sağlanır.</p>
+        <a class="cta" href="#contact">Teklif Al</a>
+      </div>
+      <div class="hero-3d" aria-hidden="true">
+        <div class="cube">
+          <div class="face f1">DEV</div>
+          <div class="face f2">SEC</div>
+          <div class="face f3">SEO</div>
+          <div class="face f4">ADS</div>
+          <div class="face f5">SMM</div>
+          <div class="face f6">SUP</div>
+        </div>
+      </div>
+    </section>
 
-  <!-- About Section -->
-  <section id="about" class="about">
-    <h2>Hakkımızda</h2>
-    <p>Drakos Software, ölçeklenebilir yazılımlar ve yapay zekâ çözümleri geliştiren yaratıcı bir mühendislik ekibidir.</p>
-  </section>
+    <section id="services" class="cards">
+      <article class="card">
+        <h3>Özel Yazılım</h3>
+        <p>Web uygulamaları, kurumsal yazılımlar, entegrasyonlar ve bakım.</p>
+      </article>
+      <article class="card">
+        <h3>Siber Güvenlik</h3>
+        <p>Penetrasyon testi, zafiyet taramaları, güvenlik danışmanlığı ve izleme.</p>
+      </article>
+      <article class="card">
+        <h3>Dijital Pazarlama</h3>
+        <p>SEO optimizasyonu, Google Ads yönetimi, sosyal medya stratejileri.</p>
+      </article>
+    </section>
 
-  <!-- Contact Section -->
-  <section id="contact" class="contact">
-    <h2>İletişim</h2>
-    <form>
-      <input type="text" placeholder="Adınız" required>
-      <input type="email" placeholder="E-posta" required>
-      <textarea placeholder="Projeniz hakkında bilgi verin"></textarea>
-      <button type="submit">Gönder</button>
-    </form>
-  </section>
+    <section id="security" class="two-col">
+      <div>
+        <h3>Tam Kapsamlı Siber Güvenlik</h3>
+        <ul>
+          <li>Penetrasyon Testleri (Web, Mobil, API)</li>
+          <li>Zafiyet Yönetimi ve İzleme</li>
+          <li>İçeriden/Dışarıdan Testler ve Raporlama</li>
+          <li>Olay Müdahale ve Forensik</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Destek & Hizmetler</h3>
+        <p>7/24 AnyDesk uzaktan destek ile acil müdahale. İletişim: <a href="tel:+905011645967">+90 501 164 5967</a></p>
+      </div>
+    </section>
 
-  <!-- Chat Assistant -->
-  <section class="chatbot">
-    <h2>Yapay Zekâ Asistanı</h2>
-    <div id="chat-box"></div>
-    <input type="text" id="chat-input" placeholder="Mesajınızı yazın...">
-    <button onclick="sendMsg()">Gönder</button>
-  </section>
+    <section id="contact" class="contact">
+      <h3>İletişim</h3>
+      <p>Telefon: <a href="tel:+905011645967">+90 501 164 5967</a></p>
+      <p>Email: <a href="mailto:info@drakos.software">info@drakos.software</a></p>
+      <div class="socials">
+        <a href="#" aria-label="LinkedIn">LinkedIn</a>
+        <a href="#" aria-label="Twitter">Twitter</a>
+        <a href="#" aria-label="Instagram">Instagram</a>
+      </div>
 
-  <!-- Footer -->
+      <div class="map-wrap">
+        <h4>Konum: Aydın, Kuşadası Merkez</h4>
+        <!-- Embedded map centered roughly on Kuşadası -->
+        <iframe
+          src="https://www.google.com/maps?q=37.8611,27.2550&z=15&output=embed"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+    </section>
+  </main>
+
   <footer>
-    <p>© 2025 Drakos Software. Tüm hakları saklıdır.</p>
+    <p>© <span id="year"></span> Drakos.Software — Tüm hakları saklıdır.</p>
+    <p class="small">AnyDesk ile 7/24 uzaktan destek sağlanmaktadır.</p>
   </footer>
-
-  <!-- WhatsApp Floating Button -->
-  <a id="whatsapp-float" href="https://wa.me/905011645967?text=Merhaba%20Drakos%20Software" target="_blank">
-    <img src="assets/whatsapp-icon.png" alt="WhatsApp">
-  </a>
 
   <script src="script.js"></script>
 </body>
