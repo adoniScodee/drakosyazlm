@@ -1,17 +1,87 @@
-body {
-  font-family: Arial, sans-serif;
-  margin: 0; padding: 0;
+/* Drakos.Software - Matrix style */
+:root{
+  --bg:#050607;
+  --accent:#8a2be2; /* mor */
+  --glass: rgba(255,255,255,0.03);
+  --text:#cfe7ff;
 }
-.hero {
-  background: #0a3d62; color: white; text-align: center; padding: 50px 20px;
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family:Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background:var(--bg);
+  color:var(--text);
+  overflow-x:hidden;
 }
-.btn { background: #38ada9; color: white; padding: 10px 20px; text-decoration: none; margin: 5px; display: inline-block; border-radius: 5px; }
-.btn.secondary { background: #82ccdd; }
-.services { padding: 40px; background: #f1f2f6; }
-.service-list { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; }
-.service { background: white; padding: 15px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
-.about, .contact, .chatbot { padding: 40px; }
-footer { background: #222; color: white; text-align: center; padding: 20px; }
-#whatsapp-float { position: fixed; right: 20px; bottom: 20px; width: 60px; height: 60px; }
-#whatsapp-float img { width: 100%; height: auto; }
-#chat-box { height:200px; overflow-y:auto; border:1px solid #ccc; padding:10px; margin-bottom:10px; }
+
+/* canvas covers entire background */
+#matrix{
+  position:fixed;
+  inset:0;
+  z-index:0;
+}
+
+/* nav */
+.nav{
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:12px 28px;
+  backdrop-filter: blur(6px);
+  z-index:6;
+}
+.brand{display:flex;align-items:center;gap:12px}
+.brand h1{font-size:20px;margin:0}
+.brand span{color:var(--accent)}
+.logo{width:48px;height:48px;padding:6px;background:linear-gradient(135deg,rgba(138,43,226,0.15),transparent);border-radius:8px;}
+
+/* hero */
+.hero{
+  min-height:70vh;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:120px 6vw 40px;
+  position:relative;
+  z-index:5;
+}
+.hero-content{max-width:56%;backdrop-filter: blur(4px);background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);padding:28px;border-radius:12px}
+.hero h2{font-size:36px;margin:0 0 8px}
+.cta{display:inline-block;margin-top:12px;padding:10px 18px;border-radius:10px;background:linear-gradient(90deg,var(--accent),#6a0dad);text-decoration:none;color:white;font-weight:600;}
+
+/* 3D cube */
+.hero-3d{width:320px;height:240px;perspective:900px}
+.cube{width:160px;height:160px;transform-style:preserve-3d;margin:auto;animation:spin 12s linear infinite}
+.face{position:absolute;width:160px;height:160px;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:20px;border-radius:12px;background:linear-gradient(180deg, rgba(138,43,226,0.12), rgba(138,43,226,0.06));box-shadow:0 10px 30px rgba(0,0,0,0.6)}
+.f1{transform:translateZ(80px)}.f2{transform:rotateY(90deg) translateZ(80px)}.f3{transform:rotateY(180deg) translateZ(80px)}.f4{transform:rotateY(-90deg) translateZ(80px)}.f5{transform:rotateX(90deg) translateZ(80px)}.f6{transform:rotateX(-90deg) translateZ(80px)}
+@keyframes spin{0%{transform:rotateX(0) rotateY(0)}100%{transform:rotateX(360deg) rotateY(360deg)}}
+
+/* cards */
+.cards{display:flex;gap:18px;padding:40px 6vw;z-index:4;position:relative}
+.card{flex:1;padding:18px;border-radius:12px;background:var(--glass);min-height:140px}
+
+/* two column */
+.two-col{display:flex;gap:20px;padding:24px 6vw;align-items:flex-start}
+.two-col > div{flex:1;background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);padding:18px;border-radius:10px}
+
+/* contact */
+.contact{padding:30px 6vw}
+.map-wrap{margin-top:12px}
+.map-wrap iframe{width:100%;height:320px;border:0;border-radius:8px}
+
+/* footer */
+footer{padding:20px 6vw;background:linear-gradient(180deg, rgba(0,0,0,0.4), transparent);text-align:center;font-size:14px;border-top:1px solid rgba(255,255,255,0.02);position:relative;z-index:4}
+.small{opacity:0.8;margin-top:6px}
+
+@media(max-width:900px){
+  .hero{flex-direction:column;gap:16px;padding-top:100px}
+  .hero-content{max-width:100%}
+  .cards{flex-direction:column}
+  .two-col{flex-direction:column}
+}
