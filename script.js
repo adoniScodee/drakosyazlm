@@ -11,7 +11,7 @@ addEventListener('resize', resize);
 
 const cols = Math.floor(canvas.width / 16);
 const drops = new Array(cols).fill(1);
-const chars = '01株式会社ドラゴンデーモンΖλΨ▓▒░█▲■●◼︎◆';
+const chars = '01株式会社ドラゴンデーモンΖDRλKOSΨ▓▒░█▲■●◼︎◆';
 
 function draw(){
   ctx.fillStyle = 'rgba(5,6,7,0.15)';
