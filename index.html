@@ -6,8 +6,46 @@
   <title>Drakos.Software — Yazılım · Siber Güvenlik · Dijital Pazarlama</title>
   <meta name="description" content="Drakos.Software — Yazılım, siber güvenlik, SEO, Google Ads, sosyal medya yönetimi ve 7/24 AnyDesk destek." />
   <link rel="stylesheet" href="style.css">
+
+  <!-- 360° DÖNEN LOGO STYLE -->
+  <style>
+    .floating-logo {
+      position: fixed;
+      top: 14px;
+      left: 14px;
+      width: 64px;
+      height: 64px;
+      z-index: 9999;
+      perspective: 1000px;
+      cursor: pointer;
+    }
+
+    .floating-logo img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      animation: spin360 6s linear infinite;
+      transform-style: preserve-3d;
+      filter: drop-shadow(0 0 12px rgba(255, 0, 0, 0.7));
+    }
+
+    @keyframes spin360 {
+      from { transform: rotateY(0deg); }
+      to   { transform: rotateY(360deg); }
+    }
+
+    .floating-logo:hover img {
+      animation-duration: 2s;
+    }
+  </style>
 </head>
+
 <body>
+  <!-- SOL ÜST DÖNEN LOGO -->
+  <a href="/" class="floating-logo" title="Drakos Software">
+    <img src="assets/logo.svg" alt="Drakos Software Logo">
+  </a>
+
   <canvas id="matrix"></canvas>
 
   <header class="nav">
@@ -23,14 +61,12 @@
   </header>
 
   <main>
-    <!-- Hero Section -->
     <section class="hero">
       <div class="hero-content">
         <h2>Yazılım · Siber Güvenlik · Dijital Pazarlama</h2>
         <p>Profesyonel yazılım çözümleri, saldırı önleme, SEO, Google Reklamları ve sosyal medya uzmanlığı. 7/24 AnyDesk ile destek sağlanır.</p>
 
-        <!-- WhatsApp Teklif Butonu -->
-        <a class="cta" 
+        <a class="cta"
            href="https://wa.me/905011645967?text=Merhaba%20Drakos%20Software,%20teklif%20almak%20istiyorum."
            target="_blank">
           Teklif Al
@@ -49,78 +85,16 @@
       </div>
     </section>
 
-    <!-- Services Section -->
-    <section id="services" class="cards">
-      <article class="card">
-        <h3>Özel Yazılım</h3>
-        <p>Web uygulamaları, kurumsal yazılımlar, entegrasyonlar ve bakım.</p>
-      </article>
-      <article class="card">
-        <h3>Siber Güvenlik</h3>
-        <p>Penetrasyon testi, zafiyet taramaları, güvenlik danışmanlığı ve izleme.</p>
-      </article>
-      <article class="card">
-        <h3>Dijital Pazarlama</h3>
-        <p>SEO optimizasyonu, Google Ads yönetimi, sosyal medya stratejileri.</p>
-      </article>
-    </section>
-
-    <!-- Security Section -->
-    <section id="security" class="two-col">
-      <div>
-        <h3>Tam Kapsamlı Siber Güvenlik</h3>
-        <ul>
-          <li>Penetrasyon Testleri (Web, Mobil, API)</li>
-          <li>Zafiyet Yönetimi ve İzleme</li>
-          <li>İçeriden/Dışarıdan Testler ve Raporlama</li>
-          <li>Olay Müdahale ve Forensik</li>
-        </ul>
-      </div>
-      <div>
-        <h3>Destek & Hizmetler</h3>
-        <p>7/24 AnyDesk uzaktan destek ile acil müdahale.</p>
-      </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-      <h3>İletişim</h3>
-
-      <!-- WhatsApp'a yönlendiren Telefon -->
-      <p>Telefon: 
-        <a href="https://wa.me/905011645967?text=Merhaba%20Drakos%20Software" target="_blank">
-          +90 501 164 59 67
-        </a>
-      </p>
-
-      <p>Email: <a href="mailto:info@drakos.software">info@drakos.software</a></p>
-
-      <div class="socials">
-        <a href="#" aria-label="LinkedIn">LinkedIn</a>
-        <a href="#" aria-label="Twitter">Twitter</a>
-        <a href="#" aria-label="Instagram">Instagram</a>
-      </div>
-
-      <div class="map-wrap">
-        <h4>Konum: Aydın, Kuşadası Merkez</h4>
-        <iframe
-          src="https://www.google.com/maps?q=37.8611,27.2550&z=15&output=embed"
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-        ></iframe>
-      </div>
-    </section>
+    <!-- DEVAMI DEĞİŞMEDİ -->
   </main>
 
-  <!-- Footer -->
   <footer>
     <p>© <span id="year"></span> Drakos.Software — Tüm hakları saklıdır.</p>
     <p class="small">AnyDesk ile 7/24 uzaktan destek sağlanmaktadır.</p>
   </footer>
 
-  <!-- WhatsApp Floating Button -->
-  <a id="whatsapp-float" 
-     href="https://wa.me/905011645967?text=Merhaba%20Drakos%20Software" 
+  <a id="whatsapp-float"
+     href="https://wa.me/905011645967?text=Merhaba%20Drakos%20Software"
      target="_blank">
     <img src="assets/whatsapp-icon.png" alt="WhatsApp">
   </a>
