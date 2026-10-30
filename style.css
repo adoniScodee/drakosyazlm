@@ -61,7 +61,7 @@ nav a:hover { color:#c026d3; text-shadow:0 0 12px #c026d3; }
 }
 .cube .face { 
   position:absolute; width:320px; height:320px; 
-  background:rgba(160,32,240,0.12); border:2px solid #a020f0; 
+  background:rgba(161,32,240,0.12); border:2px solid #a020f0; 
   display:flex; align-items:center; justify-content:center; 
   font-family:'Orbitron',sans-serif; font-size:3.2rem; font-weight:900; 
   color:#d946ef; text-shadow:0 0 15px #d946ef; 
